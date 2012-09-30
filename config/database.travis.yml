@@ -3,4 +3,4 @@ test:
   database: flickbar2_test
   username: root
   password: 
-  encoding: utf-8
+  encoding: utf8
