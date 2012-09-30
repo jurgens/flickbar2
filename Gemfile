@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'mysql2'
 gem 'rails-backbone'
 gem 'haml-rails'
+gem 'sorcery'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,4 +25,9 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'ffaker'
+end
+
+group :test do
+  gem 'shoulda-matchers'
 end

@@ -1,6 +1,8 @@
+#movies
+
 :javascript
   $(function() {
     // Blog is the app name
-    window.router = new Flickbar2.Routers.MoviesRouter({posts: #{@posts.to_json.html_safe}});
+    window.router = new Flickbar2.Routers.WatchesRouter({watches: #{@watches.to_json.html_safe}});
     Backbone.history.start();
   });

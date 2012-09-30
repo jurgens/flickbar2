@@ -1,5 +1,4 @@
-class Flickbar2.Routers.MoviesRouter extends Backbone.Router
-  initialize: (options) ->
+
     @movies = new Flickbar2.Collections.MoviesCollection()
     @movies.reset options.movies
 
