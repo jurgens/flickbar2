@@ -3,3 +3,6 @@ rvm:
   - "1.9.3"
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - mysql -e 'create database flickbar2_test;'
