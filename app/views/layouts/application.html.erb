@@ -8,7 +8,21 @@
 </head>
 <body>
 
-<%= yield %>
+  <header>
+    <ul>
+      <li><%= link_to 'Home', '#/' %></li>
+      <% if logged_in? %>
+        <li>Welcome back, <%=current_user.email %></li>
+        <li><%=link_to 'Sign out', '#' %></li>
+      <% else %>
+      <li><%= link_to 'Sign in', '#/sign_in' %></li>
+      <% end %>
+    </ul>
+  </header>
+
+  <%= flash_messages(flash) %>
+
+  <%= yield %>
 
 </body>
 </html>

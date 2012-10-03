@@ -9,3 +9,8 @@ window.Flickbar2 =
   Collections: {}
   Routers: {}
   Views: {}
+
+  init: ->
+    new Flickbar2.Routers.SessionsRouter()
+    window.router = new Flickbar2.Routers.WatchesRouter()
+    Backbone.history.start()
