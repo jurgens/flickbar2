@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
 
   has_many :watches
   has_many :movies, through: :watches
+
+  def as_json(options)
+    super(only: [:id, :email, :created_at, :updated_at])
+  end
 end

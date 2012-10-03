@@ -1,6 +1,9 @@
 Flickbar2::Application.routes.draw do
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create]
+  match 'sign_out' => "sessions#destroy"
+
+  get "/home/header" => "home#header"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

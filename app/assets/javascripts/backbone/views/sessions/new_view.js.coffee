@@ -8,8 +8,6 @@ class Flickbar2.Views.Sessions.New extends Backbone.View
 
   constructor: (options) ->
     super(options)
-    console.log('collection', @collection)
-    @model = new @collection.model()
 
     @model.bind("change:errors", () =>
       this.render()
@@ -24,11 +22,14 @@ class Flickbar2.Views.Sessions.New extends Backbone.View
 
     @model.set({email: email.val(), password: password.val()})
 
-    @collection.create(@model.toJSON(),
+    @model.save(null,
       success: (session) =>
+        console.log("logged in")
+        this.$(".flash").html('Success')
         @model = session
-        console.log('success', @model)
-#        window.location.hash = "/#{@model.id}"
+        $("body").trigger("session:change")
+        console.log('trigger')
+        window.location.hash = "#/"
 
       error: (session, jqXHR) =>
         console.log('error')

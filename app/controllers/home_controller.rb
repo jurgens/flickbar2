@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
+
   def index
-    @movies = Movie.all
+
   end
-  
+
+  def header
+    render partial: "layouts/header"
+  end
 end

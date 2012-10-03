@@ -32,8 +32,10 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'launchy'
-  gem 'poltergeist'
+  #gem 'poltergeist'
+  gem 'capybara-webkit'
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :tools do
