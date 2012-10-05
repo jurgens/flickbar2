@@ -15,7 +15,6 @@ window.Flickbar2 =
     window.router = new Flickbar2.Routers.WatchesRouter()
 
     $("body").bind("session:change", () ->
-      console.log('session change')
       $.ajax(
         url: '/home/header?' + Math.random(),
         success: (data)->

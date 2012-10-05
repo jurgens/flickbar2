@@ -14,7 +14,6 @@ class Flickbar2.Routers.SessionsRouter extends Backbone.Router
     @session.unset('id')
     @session.destroy(
       success: () ->
-        console.log('destroy session')
         $("body").trigger("session:change")
 
     )

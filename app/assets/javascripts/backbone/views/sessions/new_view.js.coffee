@@ -24,15 +24,15 @@ class Flickbar2.Views.Sessions.New extends Backbone.View
 
     @model.save(null,
       success: (session) =>
-        console.log("logged in")
+#        console.log("logged in")
         this.$(".flash").html('Success')
         @model = session
         $("body").trigger("session:change")
-        console.log('trigger')
+#        console.log('trigger')
         window.location.hash = "#/"
 
       error: (session, jqXHR) =>
-        console.log('error')
+#        console.log('error')
         @model.set({errors: $.parseJSON(jqXHR.responseText)})
     )
 
