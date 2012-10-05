@@ -4,5 +4,4 @@ def login_as(login, password)
   fill_in 'Email', with: login
   fill_in 'Password', with: password
   click_button 'Sign in'
-  save_and_open_page
 end
